@@ -1,0 +1,36 @@
+@prefix tt: <http://dilab77.ionio.gr/swp/nikolaidi/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+tt:Teacher:   rdf:type rdfs:Class;
+                rdfs:subClassof foaf:Person .
+tt:Classroom: rdf:type rdfs:Class .
+tt:Lesson: rdf:type rdfs:Class .
+tt:IDnumber: rdf:type rdfs:Class .
+tt:Καθηγητής: rdf:type rdf:Property;
+                rdfs:domain tt:IDnumber;
+                rdfs:range tt:Teacher .
+tt:Αίθουσα: rdf:type rdf:Property;
+            rdfs:domain tt:IDnumber;
+            rdfs:range tt:Classroom .
+tt:Μάθημα: rdf:type rdf:Property;
+            rdfs:domain tt:IDnumber;
+            rdfs:range tt:Lesson .
+tt:Ώρα%20έναρξης: rdf:type rdf:Property;
+                    rdf:domain tt:IDnumber;
+                    rdfs:range xsd:time .
+tt:Ώρα%20λήξης: rdf:type rdf:Property;
+                rdf:domain tt:IDnumber;
+                rdf:range xsd:time. 
+tt:Εξάμηνο: rdf:type rdf:Property;
+                rdf:domain tt:IDnumber ; 
+                rdf:range xsd:string . 
+tt:Ημέρα: rdf:type rdf:Property;
+            rdf:domain tt:IDnumber;
+            rdf:range xsd:string .
+            
+
+
+
+
